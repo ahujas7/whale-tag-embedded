@@ -1,0 +1,6 @@
+../Core/Src/bno080.c:21:5:bno080_initialization	144	static
+../Core/Src/bno080.c:70:5:bno080_sendFeatureCommand	168	static
+../Core/Src/bno080.c:124:5:bno080_receiveSPIPacket	24	static
+../Core/Src/bno080.c:158:5:bno080_sendSPIPacket	16	static
+../Core/Src/bno080.c:172:17:bno080_getVectorQuaternion	376	static
+../Core/Src/bno080.c:198:5:bno080_waitForLowINT	16	static
