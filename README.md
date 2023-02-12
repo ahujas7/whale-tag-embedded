@@ -1,4 +1,4 @@
-# CETI Embedded Software for Tag v3.0
+# CETI Embedded Software for Tag V3.0
 ## Background
 This repository contains the source code for the software
 that is used to build the image for the embedded computer
