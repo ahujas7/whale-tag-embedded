@@ -129,3 +129,14 @@ dmypy.json
 
 out/
 raspbian/
+
+# STM32CubeIDE
+.metadata
+language.settings.xml
+Release
+Debug
+.launch
+*.launch
+
+# MacOS file
+.DS_Store

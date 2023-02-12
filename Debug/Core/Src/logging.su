@@ -1,4 +1,0 @@
-../Core/Src/logging.c:13:6:logging_setFilename	16	static
-../Core/Src/logging.c:18:6:logging_writeToFile	24	static
-../Core/Src/logging.c:42:5:logging_mountSD	8	static
-../Core/Src/logging.c:46:5:logging_unmountSD	8	static
