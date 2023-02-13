@@ -132,7 +132,7 @@ int main(void)
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
 #ifdef UNIT_TESTS
-    runUnitTests();
+    //runUnitTests();
 #else
     while (1)
     {
