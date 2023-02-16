@@ -604,61 +604,6 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* hspi)
 }
 
 /**
-* @brief SWPMI MSP Initialization
-* This function configures the hardware resources used in this example
-* @param hswpmi: SWPMI handle pointer
-* @retval None
-*/
-void HAL_SWPMI_MspInit(SWPMI_HandleTypeDef* hswpmi)
-{
-  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
-  if(hswpmi->Instance==SWPMI1)
-  {
-  /* USER CODE BEGIN SWPMI1_MspInit 0 */
-
-  /* USER CODE END SWPMI1_MspInit 0 */
-
-  /** Initializes the peripherals clock
-  */
-    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_SWPMI1;
-    PeriphClkInit.Swpmi1ClockSelection = RCC_SWPMI1CLKSOURCE_PCLK;
-    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
-    {
-      Error_Handler();
-    }
-
-    /* Peripheral clock enable */
-    __HAL_RCC_SWPMI1_CLK_ENABLE();
-  /* USER CODE BEGIN SWPMI1_MspInit 1 */
-
-  /* USER CODE END SWPMI1_MspInit 1 */
-  }
-
-}
-
-/**
-* @brief SWPMI MSP De-Initialization
-* This function freeze the hardware resources used in this example
-* @param hswpmi: SWPMI handle pointer
-* @retval None
-*/
-void HAL_SWPMI_MspDeInit(SWPMI_HandleTypeDef* hswpmi)
-{
-  if(hswpmi->Instance==SWPMI1)
-  {
-  /* USER CODE BEGIN SWPMI1_MspDeInit 0 */
-
-  /* USER CODE END SWPMI1_MspDeInit 0 */
-    /* Peripheral clock disable */
-    __HAL_RCC_SWPMI1_CLK_DISABLE();
-  /* USER CODE BEGIN SWPMI1_MspDeInit 1 */
-
-  /* USER CODE END SWPMI1_MspDeInit 1 */
-  }
-
-}
-
-/**
 * @brief UART MSP Initialization
 * This function configures the hardware resources used in this example
 * @param huart: UART handle pointer

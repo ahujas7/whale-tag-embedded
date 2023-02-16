@@ -132,7 +132,7 @@ raspbian/
 
 # STM32CubeIDE
 .metadata
-language.settings.xml
+.settings/
 Release
 Debug
 .launch
