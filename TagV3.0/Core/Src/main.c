@@ -62,6 +62,7 @@ UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
 Keller_HandleTypedef keller_sensor;
+Light_Sensor_HandleTypedef light_sensor;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -126,7 +127,8 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-	Keller_Init(&keller_sensor, &hi2c2);
+  Keller_Init(&keller_sensor, &hi2c2);
+  Light_Sensor_Init(&light_sensor, &hi2c2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -135,6 +137,7 @@ int main(void)
 	//TODO: output on a serial monitor the result
 	Keller_Pressure_UT(&keller_sensor);
 	Keller_Temp_UT(&keller_sensor);
+	Light_UT(&light_sensor);
 #else
 	while (1)
 	{
