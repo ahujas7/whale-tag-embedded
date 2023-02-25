@@ -11,29 +11,28 @@
 #include "KellerDepth.h"
 #include "LightSensor.h"
 
-// Atmospheric Pressure and ambient temperature
-#define ATM_PRES	1.0f
-#define AMB_TEMP	21.0f
+// Steps for writing a unit test
+// Include the necessary header files to write the unit test
+// Define expected value, and tolerance for the sensors output
+// Make a prototype of the unit test and write the function in the src file
 
-// TODO: Find out what the output of the light sensor is and the average lux
-// Average room lux
-#define AVG_LUX		50
+// Atmospheric Pressure and ambient temperature
+#define ATM_PRES	0.0f	// sensor reads pressure in reference to 1.0 atm
+#define AMB_TEMP	21.0f
 
 // Pressure and temperature tolerance
 #define PRES_TOL	0.2f
 #define TEMP_TOL	2.0f
-#define LUX_TOL		5
 
-uint8_t Keller_Pressure_UT(Keller_HandleTypedef *keller_sensor);
+// TODO: Need to change to correct values, after finding lux formula
+// Average wood lab room lux
+#define AVG_LUX		300
+#define AVG_IR_LUX	200
 
-uint8_t Keller_Temp_UT(Keller_HandleTypedef *keller_sensor);
+// Lux tolerance
+#define LUX_TOL		15
 
-uint8_t Light_UT(Light_Sensor_HandleTypedef *light_sensor);
-
-//TODO: Include all the necessary header files to write the unit tests
-
-//TODO: Make a prototype of all the unit tests
-
-//TODO: Make a prototype of the a function that would run all the unit tests based on the macros
+void Keller_UT(Keller_HandleTypedef *keller_sensor);
+void Light_UT(Light_Sensor_HandleTypedef *light_sensor);
 
 #endif /* INC_UNITTESTS_H_ */

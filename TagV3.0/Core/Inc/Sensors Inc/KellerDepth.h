@@ -7,16 +7,18 @@
  *      Datasheet: keller-druck.com/en/products/pressure-transmitters/oem-pressure-transmitters/series-4ld
  */
 
-#ifndef INC_KELLERDEPTH_H_
-#define INC_KELLERDEPTH_H_
+#ifndef KELLERDEPTH_H
+#define KELLERDEPTH_H
 
 #include "stm32l4xx_hal.h"
 
+// Keller sensor I2C address
 #define KELLER_ADDR 	0x40
+
+// Request data address
 #define KELLER_REQ		0xAC
 #define KELLER_DLEN		5
 
-//TODO: NEED TO FIND VALUES
 #define P_MIN			0.0f
 #define P_MAX			200.0f
 
@@ -47,4 +49,4 @@ typedef struct __Keller_Depth_TypeDef
 void Keller_Init(Keller_HandleTypedef *keller_sensor, I2C_HandleTypeDef *hi2c_device);
 HAL_StatusTypeDef Keller_Get_Data(Keller_HandleTypedef *keller_sensor);
 
-#endif /* INC_KELLERDEPTH_H_ */
+#endif /* KELLERDEPTH_H */

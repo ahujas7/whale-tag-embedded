@@ -1,0 +1,7 @@
+SWV ITM Data Console - ITM Port: 0
+Keller Sensor Unit Test
+	Pressure Passed: -0.09atm (1 atm ref)
+	Temperature Passed: 19.50C
+Light (ALS) Sensor Unit Test:
+	Visible Passed: 299 lux
+	Infrared Passed: 206 lux

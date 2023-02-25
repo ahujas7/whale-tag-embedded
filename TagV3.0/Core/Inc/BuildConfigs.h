@@ -21,11 +21,11 @@
 #endif
 
 //Define the sensors being used
+#define BMS
 #define ECG
 #define IMU
+#define KELLER
 #define LIGHT_SNSR
-#define DEPTH_SNSR
-#define FUEL_GAUGE
 
 //Use this macro to define that you're working on the recovery part
 //#define RECOVERY
