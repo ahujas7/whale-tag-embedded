@@ -16,7 +16,7 @@ HAL_StatusTypeDef Keller_Get_Data(Keller_HandleTypedef *keller_sensor) {
 	uint8_t data_buf[1] = {0};
 	data_buf[0] = KELLER_REQ;
 
-	ret_val = HAL_I2C_Master_Transmit(keller_sensor->i2c_handler, 0x40 << 1, data_buf, 1, HAL_MAX_DELAY);
+	ret_val = HAL_I2C_Master_Transmit(keller_sensor->i2c_handler, 0x40 << 1, data_buf, 1, 100);
 
 	if(ret_val != HAL_OK){
 		return ret_val;
